@@ -32,6 +32,11 @@ const connectDB = async () => {
       process.exit(1); // Exit the process if the database connection fails
     }
   };
+
+
+  const documentRoute = require("./routes/document");
+
+   app.use("/api/document", documentRoute);   
   
   connectDB(); // Call the function to connect to the database
 // Start the server
